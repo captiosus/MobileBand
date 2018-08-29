@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+#size-error {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  z-index: 99999;
+}
+
+@media screen and (orientation:portrait)
+{
+   #size-error
+   {
+      display: none;
+   }
+}
+
+@media screen and (orientation:landscape)
+{
+   #size-error
+   {
+      display: black;
+   }
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}Bass{% endblock %}
+{% block head %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/instrument.css') }}">
+{% endblock %}
+
+{% block body %}
+  <div id="size-error">
+    <p>Please place phone in portrait mode</p>
+  </div>
+  <div id="cover"></div>
+  <div id="ready-container">
+    <p>Thanks for joining
+      <span id="bandName"></span>. We look forward to having you play the
+      <span id="instrument"></span>
+      for us. To play, tap the falling circles once they enter the target zone, which is an outlined circle at the bottom of your screen
+    </p>
+    <p class="prompt">Ready to Rock?</p>
+    <button type="button" id="ready">READY!</button>
+  </div>
+  <div id="streak">0x</div>
+  <div id="score">0</div>
+  <div id="status"></div>
+  <object type="image/svg+xml" data="{{ url_for('static', filename='svg/bass.svg') }}" id="figure">
+    Bass
+  </object>
+  <div id="bass"></div>
+  <div id="controls"></div>
+  <div id="ending">
+    <p class="title">Great Job!</p>
+    <p>Scan again for another try.</p>
+    <span>Score:</span>
+    <span id="endScore"></span>
+    <br>
+    <span>Highest Streak:</span>
+    <span id="highestStreak"></span>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/instruments/bass.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mobile/bass.js') }}"></script>
+{% endblock %}

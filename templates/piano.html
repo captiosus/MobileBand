@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block title %}Piano{% endblock %}
+{% block head %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/piano.css') }}">
+{% endblock %}
+
+{% block body %}
+  <div id="size-error">
+    <p>Please place phone in landscape mode</p>
+  </div>
+  <div id="piano">
+    <div id="keys">
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+      <button class="key key-white"></button>
+      <button class="key key-black"></button>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/instruments/piano.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mobile/piano.js') }}"></script>
+{% endblock %}

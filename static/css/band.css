@@ -1,0 +1,129 @@
+body {
+  background-color: black;
+}
+
+#qrcode {
+  display: none;
+}
+
+#stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#poster {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+#posterInputs {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.posterInput {
+  background-color: transparent;
+  width: 50vh;
+  height: 5vh;
+  position: absolute;
+  z-index: 99;
+  font-family: 'Monoton', cursive;
+  font-size: 4vh;
+  text-align: center;
+  padding: 0.5vh 0;
+  border: 0;
+  word-spacing: 8px;
+}
+
+.posterInput:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
+#bandSong {
+  font-size: 3vh;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last: center;
+  padding-top: 0;
+  color: gray;
+}
+
+#start {
+  position: absolute;
+  padding: 0;
+  font-family: 'Monoton', cursive;
+  background-color: transparent;
+  font-size: 5vh;
+  border: 3px solid black;
+  display: none;
+}
+
+#start:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset 0px 0px 5px black;
+     -moz-box-shadow: inset 0px 0px 5px black;
+          box-shadow: inset 0px 0px 5px black;
+}
+
+#start:focus {
+  outline: 0;
+  -webkit-box-shadow: inset 0px 0px 5px black;
+     -moz-box-shadow: inset 0px 0px 5px black;
+          box-shadow: inset 0px 0px 5px black;
+}
+
+#scores {
+  display: none;
+}
+
+.score {
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Skranji', cursive;
+  color: white;
+}
+
+#ending {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  background-color: #ededed;
+  width: 400px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 30px 0;
+  display: none;
+}
+
+#ending a {
+  background-color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#cover {
+  display: none;
+}

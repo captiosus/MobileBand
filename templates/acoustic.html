@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+{% block title %}Acoustic{% endblock %}
+{% block head %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/string.css') }}">
+{% endblock %}
+
+{% block body %}
+  <div id="size-error">
+    <p>Please place phone in landscape mode</p>
+  </div>
+  <div id="acoustic" class="stringInstrument">
+    <div id="strings">
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+      <div class="string">
+        <div class="fret-container">
+          <button class="fret">1</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">2</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">3</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">4</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">5</button>
+        </div>
+        <div class="fret-container">
+          <button class="fret">6</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/instruments/acoustic.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mobile/acoustic.js') }}"></script>
+{% endblock %}

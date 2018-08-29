@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/band.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+  <object type="image/svg+xml" data="{{ url_for('static', filename='svg/poster.svg') }}" id="poster">
+    Poster
+  </object>
+  <object type="image/svg+xml" data="{{ url_for('static', filename='svg/stage.svg') }}" id="stage">
+    Stage
+  </object>
+  <div id="cover"></div>
+  <div id="qrcode"></div>
+  <div id="posterInputs">
+    <input id="bandName" class="posterInput" type="text" placeholder="name">
+    <select id="bandSong" class="posterInput">
+      <option value="" selected disabled hidden>song</option>
+      <option value="seven_nation_army">seven nation army</option>
+    </select>
+    <button id="start" type="button">start</button>
+  </div>
+  <div id="scores">
+    <div id="bassScore" class="score">0</div>
+    <div id="drumkitScore" class="score">0</div>
+    <div id="guitarScore" class="score">0</div>
+  </div>
+  <div id="ending">
+    <p></p>
+    <p>Here's how you did!</p>
+    <p>
+      Bass:
+      <span id="bassScoreEnd"></span>
+    </p>
+    <p>
+      Drums:
+      <span id="drumkitScoreEnd"></span>
+    </p>
+    <p>
+      Electric Guitar:
+      <span id="guitarScoreEnd"></span>
+    </p>
+    <a href="/">Play Again</a>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+  <script src="{{ url_for('static', filename='js/instruments/drum.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/instruments/bass.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/instruments/electric.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/band.js') }}"></script>
+{% endblock %}

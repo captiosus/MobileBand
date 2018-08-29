@@ -1,0 +1,253 @@
+html {
+  touch-action: manipulation;
+}
+
+body {
+  background-color: black;
+}
+
+#status {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  font-size: 20px;
+  z-index: 9999;
+}
+
+.status {
+  width: 80px;
+  text-align: center;
+}
+
+.fadeout {
+  animation: fadeout 0.3s ease-in 0.2s;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#score {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+  color: white;
+  font-family: 'Skranji', cursive;
+}
+
+#streak {
+  font-family: 'Skranji', cursive;
+  font-size: 30px;
+  color: red;
+  position: absolute;
+  right: 20px;
+}
+
+#controls {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 1vh;
+}
+
+.control {
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  border: 3px solid;
+  border-color: currentColor;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.control-0 {
+  color: red;
+}
+
+.control-1 {
+  color: orange;
+
+}
+
+.control-2 {
+  color: green;
+}
+
+.control-3 {
+  color: blue;
+}
+
+.control-active {
+  background-color: lightgray;
+}
+
+.instruction {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  overflow-y: hidden;
+}
+
+.category {
+  height: 100%;
+  width: 1px;
+  flex-grow: 1;
+  position: relative;
+  top: 0;
+}
+
+.note {
+  width: 80px;
+  height: 35px;
+  border-radius: 50px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  line-height: 35px;
+  text-align: center;
+  background-color: currentColor;
+  animation-name: noteFall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: absolute;
+  font-size: 16px;
+  font-family: 'Gugi', cursive;
+}
+
+@keyframes noteFall {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  15% {
+    top: 15vh;
+    opacity: 0;
+  }
+ 20% {
+    top: 20vh;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 1;
+  }
+}
+
+.category-0 .note {
+  background-color: red;
+}
+
+.category-1 .note {
+  background-color: orange;
+}
+
+.category-2 .note {
+  background-color: green;
+}
+
+.category-3 .note {
+  background-color: blue;
+}
+
+#ready-container {
+  position: absolute;
+  width: 70%;
+  max-width: 400px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  background-color: #ededed;
+  padding: 5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#ready {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+#ready:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#figure {
+  height: 70%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+}
+
+#horizontal-figure {
+  width: 90%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.4;
+}
+
+#ending {
+  position: absolute;
+  width: 70%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ededed;
+  z-index: 9999;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding-bottom: 20px;
+  display: none;
+}
+
+#ending .title {
+  font-size: 18px;
+}
+
+.prompt {
+  text-align: center;
+}
+
+#bandName {
+  font-weight: bold;
+  color: maroon;
+}
+
+#instrument {
+  font-weight: bold;
+  color: maroon;
+}
